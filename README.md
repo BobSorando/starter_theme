@@ -1,103 +1,108 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@BobSorando 
-BobSorando
-/
-starterpack
-Public
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-starterpack/README.md
-@BobSorando
-BobSorando Add files via upload
-Latest commit 2f221b6 on 20 May
- History
- 1 contributor
-152 lines (108 sloc)  6.54 KB
-   
-OptimizedHTML 5
-Lightweight production ready Gulp starter.
+<h1>BS_theme starter</h1>
+<p>Lightweight production ready Gulp starter. for Wordpress</p>
 
-Start HTML Template
+<p>
+	<img src="https://raw.githubusercontent.com/agragregra/oh5/master/app/images/src/preview.jpg" alt="Start HTML Template">
+</p>
 
-OptimizedHTML 5 - lightweight startup environment with Gulp 4, Preprocessors (Sass, Scss, Less, Stylus), clean-css, Browsersync, Autoprefixer, webpack-stream, Babel, Rsync, CSS Reboot (Bootstrap reboot), Server-side HTML imports (SSI), build. It uses best practices for responsive images, JavaScript, CSS optimizing and contains a .htaccess code for resources caching (images, fonts, HTML, CSS, JS and other content types).
+<p><strong>OptimizedHTML 5</strong> - lightweight startup environment with <strong>Gulp 4</strong>, <strong>Preprocessors (Sass, Scss, Less, Stylus)</strong>, <strong>clean-css</strong>, <strong>Browsersync</strong>, <strong>Autoprefixer</strong>, <strong>webpack-stream</strong>, <strong>Babel</strong>, <strong>Rsync</strong>, <strong>CSS Reboot</strong> (Bootstrap reboot), Server-side <strong>HTML imports</strong> (SSI), <strong>build</strong>. It uses best practices for responsive images, JavaScript, CSS optimizing and contains a <strong>.htaccess</strong> code for resources caching (images, fonts, HTML, CSS, JS and other content types).</p>
 
-How to use OptimizedHTML 5
-Clone into the current folder and remove all unnecessary (one command):
+<h2>How to use OptimizedHTML 5</h2>
 
-git clone https://github.com/BobSorando/starter_theme.git .; rm -rf trunk .gitignore readme.md .git dist
-Clone or Download OptimizedHTML 5 from GitHub
-Install Node Modules: npm i
-Run: gulp
-Main Gulpfile.js options:
-preprocessor: Optional preprocessor (sass, less, styl). 'sass' also work with the Scss syntax in "styles/sass/blocks/" import folder
-fileswatch: List of files extensions for watching & hard reload
-Main Gulp tasks:
-gulp: run default gulp task (scripts, images, styles, browsersync, startwatch)
-scripts, styles, images, assets: build assets (css, js, images or all)
-deploy: project deployment via RSYNC
-build: project build
-Basic rules
-src's & dist's:
-All src | dist scripts located in app/js/app.js | app.min.js
-Main Sass|Less|Styl src files located in app/styles/{preprocessor}/main.*
-All compressed styles located in app/css/main.min.css
-Project styles config placed in app/styles/{preprocessor}/_config.*
-All src images placed in app/images/src/ folder
-All compressed images placed in app/images/dist/ folder
-Include parts of HTML code:
-Include parts of html code is implemented using SSI Browsersync server side. You can import any part of the code using construction in any of html files:
+<p>Clone into the current folder and remove all unnecessary (one command):</p>
 
-<!--#include virtual="/parts/header.html" -->
-Variables? No problem:
+<pre>git clone https://github.com/BobSorando/starter_theme .; rm -rf trunk .gitignore readme.md .git dist</pre>
 
-<!--#set var="title" value="OptimizedHTML 5" -->
-<!--#include virtual="/parts/header.html" -->
-In "/parts/header.html":
+<h2>Main Gulpfile.js options:</h2>
 
-<title><!--#echo var="title" --></title>
-Include parts of Preprocessor code:
-All included parts of preprocessor files placed in the folder "styles/{preprocessor}/blocks/". Any number of preprocessor files can be placed here and in any order. They will be automatically included in the "styles/{preprocessor}/main.*" file and processed by the selected preprocessor.
+<ul>
+	<li><strong>preprocessor</strong>: Optional preprocessor (sass, less, styl). 'sass' also work with the Scss syntax in "styles/sass/blocks/" import folder</li>
+	<li><strong>fileswatch</strong>: List of files extensions for watching & hard reload</li>
+</ul>
 
-Included features
-bootstrap-reboot - Bootstrap Reboot CSS collection
-_breakpoints.scss - Bootstrap Breakpoints mixin (available only for sass and scss)
-bootstrap-grid (optional) - Bootstrap Grid collection
-Helpers
-Fonts
-The woff2 fonts are currently recommended.
+<h2>Main Gulp tasks:</h2>
 
-Converter recommended: https://www.fontsquirrel.com/tools/webfont-generator
-Or get from google-webfonts-helper: https://google-webfonts-helper.herokuapp.com/fonts
+<ul>
+	<li><strong>gulp</strong>: run default gulp task (scripts, images, styles, browsersync, startwatch)</li>
+	<li><strong>scripts, styles, images, assets</strong>: build assets (css, js, images or all)</li>
+	<li><strong>deploy</strong>: project deployment via <strong>RSYNC</strong></li>
+	<li><strong>build</strong>: project build</li>
+</ul>
 
-font-weight helper
-100 - Extra Light or Ultra Light
-200 - Light or Thin
-300 - Book or Demi
-400 - Regular or Normal
-500 - Medium
-600 - Semibold or Demibold
-700 - Bold
-800 - Black or Extra Bold or Heavy
-900 - Extra Black or Fat or Ultra Blac or Heavy
-Caching
-Create or open .htaccess file in root folder of website (Apache). Place this code for resources caching:
+<h2>Basic rules</h2>
 
-<ifModule mod_expires.c>
+<h4>src's & dist's:</h4>
+
+<ol>
+	<li>All <strong>src | dist scripts</strong> located in <strong>app/js/app.js | app.min.js</strong></li>
+	<li><strong>Main Sass|Less|Styl</strong> src files located in <strong>app/styles/{preprocessor}/main.*</strong></li>
+	<li>All <strong>compressed styles</strong> located in <strong>app/css/main.min.css</strong></li>
+	<li>Project <strong>styles config</strong> placed in <strong>app/styles/{preprocessor}/_config.*</strong></li>
+	<li>All <strong>src images</strong> placed in <strong>app/images/src/</strong> folder</li>
+	<li>All <strong>compressed images</strong> placed in <strong>app/images/dist/</strong> folder</li>
+</ol>
+
+<h4>Include parts of HTML code:</h4>
+
+<p>Include parts of html code is implemented using SSI Browsersync server side. You can import any part of the code using construction in any of html files:</p>
+
+<pre>&lt;!--#include virtual="/parts/header.html" --&gt;</pre>
+
+<p>Variables? No problem:</p>
+
+<pre>
+&lt;!--#set var="title" value="OptimizedHTML 5" --&gt;
+&lt;!--#include virtual="/parts/header.html" --&gt;
+</pre>
+
+<p>In "/parts/header.html":</p>
+
+<pre>
+&lt;title&gt;&lt;!--#echo var="title" --&gt;&lt;/title&gt;
+</pre>
+
+<h4>Include parts of Preprocessor code:</h4>
+
+<p>All included parts of preprocessor files placed in the folder "styles/{preprocessor}/blocks/". Any number of preprocessor files can be placed here and in any order. They will be automatically included in the "styles/{preprocessor}/main.*" file and processed by the selected preprocessor.</p>
+
+<h2>Included features</h2>
+
+<ol>
+	<li><a href="https://getbootstrap.com/docs/4.0/content/reboot/">bootstrap-reboot</a> - Bootstrap Reboot CSS collection</li>
+	<li>
+		<a href="https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints">_breakpoints.scss</a> - Bootstrap Breakpoints mixin (available only for sass and scss)</li>
+		<li><a href="https://getbootstrap.com/docs/4.0/layout/grid/">bootstrap-grid</a> (optional) - Bootstrap Grid collection</li>
+</ol>
+
+<h2>Helpers</h2>
+
+<h3>Fonts</h3>
+
+<p>The woff2 fonts are currently recommended.</p>
+
+<p>Converter recommended: <a href="https://www.fontsquirrel.com/tools/webfont-generator">https://www.fontsquirrel.com/tools/webfont-generator</a><br>
+Or get from google-webfonts-helper: <a href="https://google-webfonts-helper.herokuapp.com/fonts">https://google-webfonts-helper.herokuapp.com/fonts</a></p>
+
+<h3>font-weight helper</h3>
+
+<ul>
+	<li><strong>100</strong> - Extra Light or Ultra Light</li>
+	<li><strong>200</strong> - Light or Thin</li>
+	<li><strong>300</strong> - Book or Demi</li>
+	<li><strong>400</strong> - Regular or Normal</li>
+	<li><strong>500</strong> - Medium</li>
+	<li><strong>600</strong> - Semibold or Demibold</li>
+	<li><strong>700</strong> - Bold</li>
+	<li><strong>800</strong> - Black or Extra Bold or Heavy</li>
+	<li><strong>900</strong> - Extra Black or Fat or Ultra Blac or Heavy</li>
+</ul>
+
+<h2>Caching</h2>
+
+<p>Create or open <strong>.htaccess</strong> file in root folder of website (Apache). Place this code for resources caching:</p>
+
+<pre>
+&lt;ifModule mod_expires.c&gt;
 
 # Add correct content-type for fonts & SVG
 AddType application/font-woff2 .woff2
@@ -125,25 +130,17 @@ ExpiresByType application/x-javascript "access plus 2592000 seconds"
 ExpiresByType text/html "access plus 600 seconds"
 ExpiresByType application/xhtml+xml "access plus 600 seconds"
 
-</ifModule>
+&lt;/ifModule&gt;
 
-<ifModule mod_deflate.c>
+&lt;ifModule mod_deflate.c&gt;
 
 AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript application/font-woff2 image/svg+xml
 
-</ifModule>
-Issues
-Long Preprocessor compile: Disable the "safe write" option in PHPStorm settings.
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
+&lt;/ifModule&gt;
+</pre>
+
+<h2>Issues</h2>
+
+<ol>
+	<li>Long Preprocessor compile: Disable the "safe write" option in PHPStorm settings.</li>
+</ol>
